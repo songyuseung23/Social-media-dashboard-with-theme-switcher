@@ -76,18 +76,19 @@
       <h2>Overview - Today</h2>
       <article class="today-box">
         <div class="box-top">
-          <p class="left-align page-views">Page Views</p>
+          <p class="left-align subtitle">Page Views</p>
           <img class="right-align icon" src="images/icon-facebook.svg" alt="facebook-icon">
         </div>
         <div class="box-bottom">
-          <p class="left-align count bottom">87</p>
-          <p class="right-align percent up bottom">3%</p>
+          <p class="left-align count">87</p>
+          <p class="right-align percent up">3%
+          <p>
         </div>
       </article>
 
       <article class="today-box">
         <div class="box-top">
-          <p class="left-align page-views">Likes</p>
+          <p class="left-align subtitle">Likes</p>
           <img class="right-align icon" src="images/icon-facebook.svg" alt="facebook-icon">
         </div>
         <div class="box-bottom">
@@ -98,7 +99,7 @@
 
       <article class="today-box">
         <div class="box-top">
-          <p class="left-align page-views">Likes</p>
+          <p class="left-align subtitle">Likes</p>
           <img class="right-align icon" src="images/icon-instagram.svg" alt="facebook-icon">
         </div>
         <div class="box-bottom">
@@ -109,7 +110,7 @@
 
       <article class="today-box">
         <div class="box-top">
-          <p class="left-align page-views">Profile Views</p>
+          <p class="left-align subtitle">Profile Views</p>
           <img class="right-align icon" src="images/icon-instagram.svg" alt="facebook-icon">
         </div>
         <div class="box-bottom">
@@ -120,7 +121,7 @@
 
       <article class="today-box">
         <div class="box-top">
-          <p class="left-align page-views">Retweets</p>
+          <p class="left-align subtitle">Retweets</p>
           <img class="right-align icon" src="images/icon-twitter.svg" alt="facebook-icon">
         </div>
         <div class="box-bottom">
@@ -131,7 +132,7 @@
 
       <article class="today-box">
         <div class="box-top">
-          <p class="left-align page-views">Likes</p>
+          <p class="left-align subtitle">Likes</p>
           <img class="right-align icon" src="images/icon-twitter.svg" alt="facebook-icon">
         </div>
         <div class="box-bottom">
@@ -142,7 +143,7 @@
 
       <article class="today-box">
         <div class="box-top">
-          <p class="left-align page-views">Likes</p>
+          <p class="left-align subtitle">Likes</p>
           <img class="right-align icon" src="images/icon-youtube.svg" alt="facebook-icon">
         </div>
         <div class="box-bottom">
@@ -153,7 +154,7 @@
 
       <article class="today-box">
         <div class="box-top">
-          <p class="left-align page-views">Total Views</p>
+          <p class="left-align subtitle">Total Views</p>
           <img class="right-align icon" src="images/icon-youtube.svg" alt="facebook-icon">
         </div>
         <div class="box-bottom">
@@ -164,7 +165,64 @@
 
     </section>
   </div>
+  <script>
+    // event listener
+    var button = document.querySelector("#button-nob");
 
+    var body = document.querySelector("body");
+    var topBgBox = document.querySelector(".top-bg-box");
+    var head1 = document.querySelector("h1");
+    var head2 = document.querySelector("h2");
+    var head4 = document.querySelector("h4");
+    var themeModeText = document.querySelector("#theme-mode-text");
+    var buttonBG = document.querySelector("#theme-button");
+
+    var totalTitle = document.getElementsByClassName("total-title");
+    var profileName = document.getElementsByClassName("profile-name");
+    var followers = document.getElementsByClassName("followers");
+    var subtitles = document.getElementsByClassName("subtitle");
+    var countText = document.getElementsByClassName("count");
+    var totalBox = document.getElementsByClassName("total-box");
+    var todayBox = document.getElementsByClassName("today-box");
+
+    buttonBG.addEventListener("click", changeTheme);
+
+    function changeTheme(e) {
+      body.classList.toggle("dark-theme");
+      topBgBox.classList.toggle("dark-theme");
+      head1.classList.toggle("dark-theme");
+      head2.classList.toggle("dark-theme");
+      head4.classList.toggle("dark-theme");
+      buttonBG.classList.toggle("dark-theme");
+      themeModeText.classList.toggle("dark-theme");
+      button.classList.toggle("dark-theme");
+
+      for (var i = 0; i < totalTitle.length; i++) {
+        totalTitle[i].classList.toggle("dark-theme");
+      }
+      for (var i = 0; i < profileName.length; i++) {
+        profileName[i].classList.toggle("dark-theme");
+      }
+      for (var i = 0; i < followers.length; i++) {
+        followers[i].classList.toggle("dark-theme");
+      }
+      for (var i = 0; i < subtitles.length; i++) {
+        subtitles[i].classList.toggle("dark-theme");
+      }
+      for (var i = 0; i < countText.length; i++) {
+        countText[i].classList.toggle("dark-theme");
+      }
+      for (var i = 0; i < totalBox.length; i++) {
+        totalBox[i].classList.toggle("dark-theme");
+      }
+      for (var i = 0; i < todayBox.length; i++) {
+        todayBox[i].classList.toggle("dark-theme");
+      }
+
+      console.log(totalTitle);
+
+    }
+  </script>
 
 </body>
 

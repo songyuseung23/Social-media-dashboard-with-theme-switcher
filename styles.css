@@ -1,6 +1,5 @@
 :root {
     /* Primary */
-
     --Lime-Green: hsl(163, 72%, 41%);
     --Bright-Red: hsl(356, 69%, 56%);
     --Facebook: hsl(208, 92%, 53%);
@@ -17,7 +16,7 @@
     /* Neutral */
 
     /* dark theme */
-    --Very-Dark-Blue-BG-: hsl(230, 17%, 14%);
+    --Very-Dark-Blue-BG: hsl(230, 17%, 14%);
     --Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
     --Dark-Desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
     --Desaturated-Blue-Text: hsl(228, 34%, 66%);
@@ -51,6 +50,11 @@ body {
     display: grid;
 
     background-color: var(--White-BG);
+    color: var(--Very-Dark-Blue-Text);
+}
+
+body.dark-theme {
+    background-color: var(--Very-Dark-Blue-BG);
 }
 
 .top-bg-box {
@@ -60,12 +64,16 @@ body {
     position: absolute;
     top: 0;
 
-    background-color: var(--Very-Pale-Blue-Top-BG-Pattern);
-
     z-index: -999;
 
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
+
+    background-color: var(--Very-Pale-Blue-Top-BG-Pattern);
+}
+
+.top-bg-box.dark-theme {
+    background-color: var(--Very-Dark-Blue-Top-BG-Pattern);
 }
 
 .outer-container {
@@ -86,8 +94,6 @@ body {
     display: grid;
     grid-template-rows: 1fr 1fr;
     row-gap: 5rem;
-
-    border: 1px solid red;
 }
 
 /* #region up down mark  */
@@ -127,9 +133,17 @@ h1 {
     font-size: 3rem;
 }
 
+h1.dark-theme {
+    color: var(--White-Text);
+}
+
 h4 {
     font-size: 1.4rem;
     color: var(--Dark-Grayish-Blue-Text);
+}
+
+h4.dark-theme {
+    color: var(--Desaturated-Blue-Text);
 }
 
 #theme-switch {
@@ -145,8 +159,11 @@ h4 {
     color: hsl(230, 22%, 74%);
 }
 
-#theme-button {
+#theme-mode-text.dark-theme {
+    color: var(--Desaturated-Blue-Text);
+}
 
+#theme-button {
     background-color: hsl(230, 22%, 74%);
 
     width: 5rem;
@@ -155,8 +172,17 @@ h4 {
     padding: .3rem;
 
     display: flex;
-    /* end -> start when toggle */
     justify-content: flex-end;
+}
+
+#theme-button:hover {
+    background: linear-gradient(45deg, hsl(210, 78%, 56%) 10%, hsl(146, 68%, 55%));
+    cursor: pointer;
+}
+
+#theme-button.dark-theme {
+    background: linear-gradient(45deg, hsl(210, 78%, 56%) 10%, hsl(146, 68%, 55%));
+    justify-content: flex-start;
 }
 
 #button-nob {
@@ -165,6 +191,11 @@ h4 {
     background-color: var(--White-BG);
     border-radius: 1rem;
 }
+
+#button-nob.dark-theme {
+    background-color: var(--Very-Dark-Blue-Top-BG-Pattern);
+}
+
 
 /* #endregion */
 
@@ -195,6 +226,17 @@ h4 {
     border-radius: .5rem;
 }
 
+.total-box:hover,
+.today-box:hover {
+    cursor: pointer;
+    background-color: hsl(227, 47%, 93%);
+}
+
+.total-box.dark-theme,
+.today-box.dark-theme {
+    background-color: var(--Dark-Desaturated-Blue-Card-BG);
+}
+
 .profile-name {
     font-size: 1.2rem;
     font-weight: 700;
@@ -204,10 +246,18 @@ h4 {
     align-items: center;
 }
 
+.profile-name.dark-theme {
+    color: var(--Desaturated-Blue-Text);
+}
+
 .total-title {
     font-size: 6rem;
     font-weight: 700;
     text-align: center;
+}
+
+.total-title.dark-theme {
+    color: var(--White-Text);
 }
 
 .followers {
@@ -216,6 +266,10 @@ h4 {
     font-size: 1.4rem;
     letter-spacing: .5rem;
     text-align: center;
+}
+
+.followers.dark-theme {
+    color: var(--Desaturated-Blue-Text);
 }
 
 .today-subs {
@@ -252,6 +306,16 @@ h4 {
     background-clip: content-box, border-box;
 }
 
+#insta:hover {
+    background-image: linear-gradient(hsl(227, 47%, 93%), hsl(227, 47%, 93%)),
+        linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+#insta.dark-theme {
+    background-image: linear-gradient(hsl(228, 28%, 20%), hsl(228, 28%, 20%)),
+        linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
 #insta>p:first-child::before {
     content: url(images/icon-instagram.svg);
     margin-right: 1rem;
@@ -284,6 +348,10 @@ h2 {
     color: var(--Dark-Grayish-Blue-Text);
 }
 
+h2.dark-theme {
+    color: var(--White-Text);
+}
+
 .today-box {
     height: 100%;
     padding: 2rem 2.5rem;
@@ -313,15 +381,23 @@ h2 {
 }
 
 
-.page-views {
+.subtitle {
     font-size: 1.4rem;
     color: var(--Dark-Grayish-Blue-Text);
     font-weight: 700;
 }
 
+.subtitle.dark-theme {
+    color: var(--Desaturated-Blue-Text);
+}
+
 .count {
     font-size: 3rem;
     font-weight: 700;
+}
+
+.count.dark-theme {
+    color: var(--White-Text);
 }
 
 .percent {
