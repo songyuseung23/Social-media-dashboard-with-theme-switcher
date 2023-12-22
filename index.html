@@ -17,7 +17,7 @@
 </head>
 
 <body>
-  <div class="top-bg-container"></div>
+  <div class="top-bg-box"></div>
   <div class="outer-container">
     <section id="total">
       <header>
@@ -25,10 +25,10 @@
           <h1>Social Media Dashboard</h1>
           <h4>Total Followers: 23,004</h4>
         </div>
-        <div class="theme-switch">
-          <p id="theme-mode">Dark Mode</p>
-          <div class="theme-button">
-            <div class="button-nob"></div>
+        <div id="theme-switch">
+          <p id="theme-mode-text">Dark Mode</p>
+          <div id="theme-button">
+            <div id="button-nob"></div>
           </div>
         </div>
       </header>
@@ -40,7 +40,7 @@
             <p class="total-title">1987</p>
             <p class="followers">FOLLOWERS</p>
           </div>
-          <p class="today-subs">12 Today</p>
+          <p class="today-subs up">12 Today</p>
         </article>
 
         <article class="total-box" id="twitter">
@@ -49,7 +49,7 @@
             <p class="total-title">1044</p>
             <p class="followers">FOLLOWERS</p>
           </div>
-          <p class="today-subs">99 Today</p>
+          <p class="today-subs up">99 Today</p>
         </article>
 
         <article class="total-box" id="insta">
@@ -58,7 +58,7 @@
             <p class="total-title">11k</p>
             <p class="followers">FOLLOWERS</p>
           </div>
-          <p class="today-subs">1099 Today</p>
+          <p class="today-subs up">1099 Today</p>
         </article>
 
         <article class="total-box" id="youtube">
@@ -74,14 +74,94 @@
 
     <section id="today-boxes">
       <h2>Overview - Today</h2>
-      <article class="today-box">11</article>
-      <article class="today-box">12</article>
-      <article class="today-box">13</article>
-      <article class="today-box">14</article>
-      <article class="today-box">15</article>
-      <article class="today-box">16</article>
-      <article class="today-box">17</article>
-      <article class="today-box">18</article>
+      <article class="today-box">
+        <div class="box-top">
+          <p class="left-align page-views">Page Views</p>
+          <img class="right-align icon" src="images/icon-facebook.svg" alt="facebook-icon">
+        </div>
+        <div class="box-bottom">
+          <p class="left-align count bottom">87</p>
+          <p class="right-align percent up bottom">3%</p>
+        </div>
+      </article>
+
+      <article class="today-box">
+        <div class="box-top">
+          <p class="left-align page-views">Likes</p>
+          <img class="right-align icon" src="images/icon-facebook.svg" alt="facebook-icon">
+        </div>
+        <div class="box-bottom">
+          <p class="left-align count">52</p>
+          <p class="right-align percent down">2%</p>
+        </div>
+      </article>
+
+      <article class="today-box">
+        <div class="box-top">
+          <p class="left-align page-views">Likes</p>
+          <img class="right-align icon" src="images/icon-instagram.svg" alt="facebook-icon">
+        </div>
+        <div class="box-bottom">
+          <p class="left-align count">5462</p>
+          <p class="right-align percent up">2257%</p>
+        </div>
+      </article>
+
+      <article class="today-box">
+        <div class="box-top">
+          <p class="left-align page-views">Profile Views</p>
+          <img class="right-align icon" src="images/icon-instagram.svg" alt="facebook-icon">
+        </div>
+        <div class="box-bottom">
+          <p class="left-align count">52k</p>
+          <p class="right-align percent up">1375%</p>
+        </div>
+      </article>
+
+      <article class="today-box">
+        <div class="box-top">
+          <p class="left-align page-views">Retweets</p>
+          <img class="right-align icon" src="images/icon-twitter.svg" alt="facebook-icon">
+        </div>
+        <div class="box-bottom">
+          <p class="left-align count">117</p>
+          <p class="right-align percent up">303%</p>
+        </div>
+      </article>
+
+      <article class="today-box">
+        <div class="box-top">
+          <p class="left-align page-views">Likes</p>
+          <img class="right-align icon" src="images/icon-twitter.svg" alt="facebook-icon">
+        </div>
+        <div class="box-bottom">
+          <p class="left-align count">507</p>
+          <p class="right-align percent up">553%</p>
+        </div>
+      </article>
+
+      <article class="today-box">
+        <div class="box-top">
+          <p class="left-align page-views">Likes</p>
+          <img class="right-align icon" src="images/icon-youtube.svg" alt="facebook-icon">
+        </div>
+        <div class="box-bottom">
+          <p class="left-align count">107</p>
+          <p class="right-align percent down">19%</p>
+        </div>
+      </article>
+
+      <article class="today-box">
+        <div class="box-top">
+          <p class="left-align page-views">Total Views</p>
+          <img class="right-align icon" src="images/icon-youtube.svg" alt="facebook-icon">
+        </div>
+        <div class="box-bottom">
+          <p class="left-align count">1407</p>
+          <p class="right-align percent down">12%</p>
+        </div>
+      </article>
+
     </section>
   </div>
 

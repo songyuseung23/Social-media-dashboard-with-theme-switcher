@@ -44,7 +44,6 @@ Html {
 }
 
 body {
-
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
     width: 100vw;
@@ -54,7 +53,7 @@ body {
     background-color: var(--White-BG);
 }
 
-.top-bg-container {
+.top-bg-box {
     width: 100%;
     height: 25rem;
 
@@ -91,6 +90,33 @@ body {
     border: 1px solid red;
 }
 
+/* #region up down mark  */
+.up {
+    color: var(--Lime-Green);
+}
+
+.up::before {
+    content: url(images/icon-up.svg);
+    position: absolute;
+    top: -15%;
+    left: -1.2rem;
+}
+
+.down {
+    color: var(--Bright-Red);
+}
+
+.down::before {
+    content: url(images/icon-down.svg);
+    position: absolute;
+    top: -10%;
+    left: -1.2rem;
+}
+
+/* #endregion */
+
+/* #region Section #total */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -101,17 +127,48 @@ h1 {
     font-size: 3rem;
 }
 
-h2 {
-    font-size: 2.5rem;
-    color: var(--Dark-Grayish-Blue-Text);
-}
-
 h4 {
     font-size: 1.4rem;
     color: var(--Dark-Grayish-Blue-Text);
 }
 
-/*#region Total box itself style */
+#theme-switch {
+    width: 14rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#theme-mode-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: hsl(230, 22%, 74%);
+}
+
+#theme-button {
+
+    background-color: hsl(230, 22%, 74%);
+
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 1.25rem;
+    padding: .3rem;
+
+    display: flex;
+    /* end -> start when toggle */
+    justify-content: flex-end;
+}
+
+#button-nob {
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: var(--White-BG);
+    border-radius: 1rem;
+}
+
+/* #endregion */
+
+/*#region Section #total-boxes */
 
 #total {
     display: grid;
@@ -124,7 +181,8 @@ h4 {
     column-gap: 3rem;
 }
 
-.total-box {
+.total-box,
+.today-box {
     height: 100%;
 
     display: flex;
@@ -136,10 +194,6 @@ h4 {
 
     border-radius: .5rem;
 }
-
-/*#endregion */
-
-/*#region Total box content style*/
 
 .profile-name {
     font-size: 1.2rem;
@@ -165,31 +219,11 @@ h4 {
 }
 
 .today-subs {
-    color: var(--Lime-Green);
     font-size: 1.2rem;
     font-weight: 700;
 
-    display: flex;
-    align-items: center;
-
     position: relative;
 }
-
-.today-subs::before {
-    content: url(images/icon-up.svg);
-    position: absolute;
-    top: -15%;
-    left: -1.2rem;
-}
-
-.down {
-    color: var(--Bright-Red);
-}
-
-.down::before {
-    content: url(images/icon-down.svg);
-}
-
 
 #facebook {
     border-top: 5px solid var(--Facebook);
@@ -232,14 +266,9 @@ h4 {
     margin-right: 1rem;
 }
 
-/*#endregion*/
+/* #endregion */
 
-/*#region Today box itself style */
-
-.today-box {
-    border: 1px solid black;
-    height: 100%;
-}
+/*#region Section #today-boxes */
 
 #today-boxes {
     display: grid;
@@ -251,5 +280,55 @@ h4 {
 
 h2 {
     grid-column: 1/-1;
-
+    font-size: 2.5rem;
+    color: var(--Dark-Grayish-Blue-Text);
 }
+
+.today-box {
+    height: 100%;
+    padding: 2rem 2.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: var(--Light-Grayish-Blue-Card-BG);
+    border-radius: .5rem;
+}
+
+.box-top {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-bottom {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+.page-views {
+    font-size: 1.4rem;
+    color: var(--Dark-Grayish-Blue-Text);
+    font-weight: 700;
+}
+
+.count {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.percent {
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    position: relative;
+}
+
+/*#endregion */
