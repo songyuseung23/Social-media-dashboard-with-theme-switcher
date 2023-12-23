@@ -25,6 +25,7 @@
           <h1>Social Media Dashboard</h1>
           <h4>Total Followers: 23,004</h4>
         </div>
+        <div class="hr"></div>
         <div id="theme-switch">
           <p id="theme-mode-text">Dark Mode</p>
           <div id="theme-button">
@@ -82,7 +83,6 @@
         <div class="box-bottom">
           <p class="left-align count">87</p>
           <p class="right-align percent up">3%
-          <p>
         </div>
       </article>
 
@@ -171,6 +171,7 @@
 
     var body = document.querySelector("body");
     var topBgBox = document.querySelector(".top-bg-box");
+    var hr = document.querySelector(".hr");
     var head1 = document.querySelector("h1");
     var head2 = document.querySelector("h2");
     var head4 = document.querySelector("h4");
@@ -190,6 +191,7 @@
     function changeTheme(e) {
       body.classList.toggle("dark-theme");
       topBgBox.classList.toggle("dark-theme");
+      hr.classList.toggle("dark-theme");
       head1.classList.toggle("dark-theme");
       head2.classList.toggle("dark-theme");
       head4.classList.toggle("dark-theme");
